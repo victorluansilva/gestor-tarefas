@@ -10,6 +10,8 @@ Necessário XAMP instalado com os serviços do Apache e MySQL
 
 Crie um arquivo `.env` para passar os dados de acesso do banco
 
+### .env
+
 ```javascript
 APP_NAME="Gestor de Tarefas"
 # Configurações do Banco de Dados
@@ -32,4 +34,15 @@ $cfg['Lang'] = '';
 $cfg['Servers'][$i]['host'] = '127.0.0.1';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['port'] = '3306';
+```
+
+### alias httpd.conf
+
+```markdown
+Alias /workspace "C:\Users\aluno.senai.php\workspace"
+
+<Directory "C:\Users\aluno.senai.php\workspace">
+    Options Indexes FollowSymLinks
+    Require all granted
+</Directory>
 ```
