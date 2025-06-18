@@ -23,7 +23,7 @@ function loadDotEnv(string $path): void
         }
     }
 }
-loadDotEnv(__DIR__ . '/../.env');
+loadDotEnv(__DIR__ . '/.env');
 
 // --- Configurações do Banco de Dados ---
 
