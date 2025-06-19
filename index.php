@@ -13,12 +13,25 @@
 <body>
     <div class="container">
         <h1>Gestor de Tarefas</h1>
-        <form action="">
+        <form action=""  class="task-form">
             <input type="hidden" name="action" value="create">
             <input type="text" name="description" class="task-input" placeholder="Digite a nova tarefa..." required>
             <button type="submit" class="btn">Adicionar</button>
         </form>
         <ul class="task-list">
+            <?php if(count($tasks) > 0): ?>
+                <?php foreach($tasks as $task): ?>
+                    <li 
+                    class="task-item <?= $task['is_completed'] ? 'completed' : '' ?>"
+                    data-task-id="<?= $task['id']?>"
+                    >
+
+                    </li>
+
+                <?php endforeach; ?>
+            <?php else: ?>
+
+            <?php endif; ?>
         </ul>
     </div>
 </body>
