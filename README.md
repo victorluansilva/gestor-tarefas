@@ -10,6 +10,17 @@ Necessário XAMP instalado com os serviços do Apache e MySQL
 
 Crie um arquivo `.env` para passar os dados de acesso do banco
 
+### SQL
+
+```sql
+CREATE TABLE tasks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  description VARCHAR(255) NOT NULL,
+  is_completed BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
 ### .env
 
 ```javascript
