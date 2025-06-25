@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <h1>Gestor de Tarefas</h1>
-        <form action=""  class="task-form">
+        <form action="acoes.php"  class="task-form" method="POST">
             <input type="hidden" name="action" value="create">
             <input type="text" name="description" class="task-input" placeholder="Digite a nova tarefa..." required>
             <button type="submit" class="btn">Adicionar</button>
