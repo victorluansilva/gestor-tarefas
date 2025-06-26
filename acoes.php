@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $id = $_POST['task_id'] ?? 0;
         if($id > 0){
             $stmt = $pdo->prepare('DELETE FROM tasks WHERE id=?');
-            $stmt = execute([$id]);
+            $stmt->execute([$id]);
         }
     }
 }
